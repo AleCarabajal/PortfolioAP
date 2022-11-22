@@ -1,0 +1,50 @@
+/* Las etiquetas de HTML van directamente el nombre sin punto ni hashtag */
+/* a las CLASES (class) se le anteponen un punto "." */
+/* los ID van con "#" (hashtag) adelante */
+
+body{
+    background-color: rgba(184, 226, 231, 0.639); /*color de fondo */
+    color: blue; /*color de fuente */
+}
+
+#redes{
+    text-align: center; /*centra el texto*/
+    margin: auto; /*el margen de los costados es automático */
+}
+
+li{
+    list-style-type: none; /*me quita los puntitos de la lista */
+    margin-left: -3%;    
+}
+
+.imgPerfil{
+    width: 50%;
+    height: 40%;
+    border-radius: 100%; /*redondea la imagen*/
+    border-style: solid; /*añade un borde alrrededor de la imagen*/
+   
+}
+
+.nombreperfil{
+    font-size: 3em; /*se coloca en "rem" cuando querramos que sea el tamaño con respecto a toda la página web y se utiliza "em" cuando querramos que el tamaño se corresponda con la sección donde se encuentra.*/
+    color: black;
+
+}
+
+.fotoPerfil{
+    justify-content: flex;
+    display: flex;
+    width: 30%;
+}
+
+#banner{
+    display: flex;
+    border-style: solid;
+    margin: auto;   
+    color: blueviolet; 
+}
+
+img{
+    width: 100%;  /*anchura del banner*/    
+}
+
