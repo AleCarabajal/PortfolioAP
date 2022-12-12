@@ -2,14 +2,26 @@
 /* a las CLASES (class) se le anteponen un punto "." */
 /* los ID van con "#" (hashtag) adelante */
 
+
 body{
     background-color: rgba(184, 226, 231, 0.639); /*color de fondo */
-    color: blue; /*color de fuente */
+    color: rgb(0, 0, 0); /*color de fuente */
 }
 
-#redes{
-    text-align: center; /*centra el texto*/
-    margin: auto; /*el margen de los costados es automático */
+#navbar{
+    position: fixed; /*fijamos el navbar y al hacer scroll no se mueve la misma*/
+    width: 100%;
+}
+
+.logoAP{
+    width: 50%;
+    height: 20%;
+}
+
+/*Modificamos los iconos de las redes sociales*/
+li.list-group-item:hover{
+    cursor: pointer; /*al ubocar el mouse sobre el icono se pone una manito*/
+    color:blue /*asigna un color al colocar el puntero sobre el icono de las redes sociales*/
 }
 
 li{
@@ -22,13 +34,12 @@ li{
     height: 40%;
     border-radius: 100%; /*redondea la imagen*/
     border-style: solid; /*añade un borde alrrededor de la imagen*/
-   
+    
 }
 
 .nombreperfil{
     font-size: 3em; /*se coloca en "rem" cuando querramos que sea el tamaño con respecto a toda la página web y se utiliza "em" cuando querramos que el tamaño se corresponda con la sección donde se encuentra.*/
     color: black;
-
 }
 
 .fotoPerfil{
@@ -38,13 +49,16 @@ li{
 }
 
 #banner{
-    display: flex;
-    border-style: solid;
-    margin: auto;   
-    color: blueviolet; 
+    display: flex
+    border-style= solid;
+    padding: 20px 10px; 
 }
 
 img{
-    width: 100%;  /*anchura del banner*/    
+    width: 100%;  /*ancho del banner*/  
 }
 
+
+.col{
+    margin: auto;
+}
