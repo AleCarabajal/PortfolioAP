@@ -2,63 +2,1057 @@
 /* a las CLASES (class) se le anteponen un punto "." */
 /* los ID van con "#" (hashtag) adelante */
 
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;600;700&display=swap");
 
-body{
-    background-color: rgba(184, 226, 231, 0.639); /*color de fondo */
-    color: rgb(0, 0, 0); /*color de fuente */
+/* SCROLL */
+::-webkit-scrollbar{
+  width: 15px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: #333;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: #45f3ff;
+    border-radius: 5px;
+  }
+
+/*===== BODY =====*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #404040; /*color de fondo */
+  color: #d1d1d1; /*color de fuente */
+  font-family: "Signika Negative", sans-serif;
 }
 
-#navbar{
-    position: fixed; /*fijamos el navbar y al hacer scroll no se mueve la misma*/
-    width: 100%;
+/*===== Navbar =====*/
+
+.navbar {
+  padding: 1 rem;
+  background: rgba(255, 255, 255, 0.8); /*transparencia de navbar */
+  /* position: fixed; */
+  width: 100%;
+  font-size: 15px;
 }
 
-.logoAP{
+.navbar-brand {
+  width: 10%;
+}
+
+.nav-item {
+  padding: auto;
+  margin: auto;
+}
+
+.nav-link {
+  color: #484343;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoap {
+  width: 100%;
+}
+
+.btnlogin {
+  transition: all 0.5s ease;
+}
+
+.btnlogin:hover {
+  transform: scale(1.5);
+  color: #2d24d3;
+}
+
+/*===== ESTILOS GENERALES =====*/
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+/*===== BANNER =====*/
+
+.banner img {
+  width: 100%; /*ancho del banner */
+  height: 100%;
+  max-width: 100%;
+}
+
+/*===== SECCIÓN SOBRE MÍ =====*/
+.sobreMi {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* FOTO DE PERFIL */
+.fotoPerfil {
+  width: 100%;
+  margin: 1em;
+  align-items: center;
+  box-shadow: 19px 18px 27px -3px #000000c2;
+  border-radius: 15px;
+}
+
+p {
+  margin: 1.5rem;
+}
+
+/* ===== SECCION SOBRE MI EXPERIENCIA LABORAL ===== */
+
+/* .laboral { */
+  .row{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns:auto;
+  flex-wrap: wrap;
+ 
+}
+
+.card-img-top {
+  width: 5rem;
+}
+
+.laboral .card {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.list-group-item {
+  color: #fff;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: #45f3ff;
+}
+
+ @media (max-width: 1200px) {
+  .col-3 {
     width: 50%;
-    height: 20%;
-}
-
-/*Modificamos los iconos de las redes sociales*/
-li.list-group-item:hover{
-    cursor: pointer; /*al ubocar el mouse sobre el icono se pone una manito*/
-    color:blue /*asigna un color al colocar el puntero sobre el icono de las redes sociales*/
-}
-
-li{
-    list-style-type: none; /*me quita los puntitos de la lista */
-    margin-left: -3%;    
-}
-
-.imgPerfil{
-    width: 50%;
-    height: 40%;
-    border-radius: 100%; /*redondea la imagen*/
-    border-style: solid; /*añade un borde alrrededor de la imagen*/
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
     
+  }
+  .col-3 .card {
+    width: 400px;
+    margin: 0.5em;
+  }
+} 
+
+@media (max-width: 768px) {
+  .col-3 {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    
+  }
+  .col-3 .card {
+    width: 400px;
+    margin: 0.5em;
+  }
+} 
+
+
+
+
+
+/* ===== SECCION SOBRE MIS HABILIDADES - SKILLS===== */
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.nombreperfil{
-    font-size: 3em; /*se coloca en "rem" cuando querramos que sea el tamaño con respecto a toda la página web y se utiliza "em" cuando querramos que el tamaño se corresponda con la sección donde se encuentra.*/
-    color: black;
+.container .card {
+  position: relative;
+  width: 220px;
+  height: 250px;
+  background: #2a2a2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 
-.fotoPerfil{
-    justify-content: flex;
+.container .card .percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.container .card .percent svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+
+.container .card .percent svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 2;
+  stroke: #191919;
+  transform: translate(5px, 5px);
+}
+
+.container .card .percent svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+  stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dot {
+  position: absolute;
+  inset: 5px;
+  z-index: 10px;
+  transform: rotate(calc(3.6deg * var(--num)));
+  animation: animateDot 2s linear forwards;
+  z-index: 1;
+}
+
+@keyframes animateDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
+}
+
+.dot::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--clr);
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+}
+
+.number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+}
+
+.number h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.number h2 span {
+  font-weight: 300;
+  color: #fff;
+  font-size: 0.5em;
+}
+
+.number p {
+  font-weight: 300;
+  font-size: 0.75em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffff;
+}
+
+/* ===== SECCION SOBRE MI EDUCACIÓN ===== */
+#educacion {
+  background: #404040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+
+.estudios{
+  color: #ffffff;
+  border: #cdcaca solid;
+}
+
+.estudios:hover{
+  color: #45f3ff;
+  border: #45f3ff solid;
+}
+
+
+.containerEducacion {
+  position: relative;
+  /* width: 1000px; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.containerEducacion .card {
+  position: relative;
+  height: 250px;
+  display: flex;
+  width: 45%;
+  margin: 30px 0;
+}
+
+.containerEducacion .card .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.cardEducacion{ 
+  height: 100%;
+  width: 100%;
+}
+
+.containerEducacion .card:hover .imgBx {
+  width: 150px;
+  height: 150px;
+  left: -150px;
+  top: calc(50%-75px);
+  transition: 0.5s ease-in-out;
+  
+
+}
+
+
+.containerEducacion .cardEducacion {
+  max-width: 102%;
+  transition: 0.5s ease-in-out;
+  
+}
+
+
+.containerEducacion .card .content {
+  position: absolute;
+  right: 0;
+  width: calc(100%-75px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerEducacion .card .content h3 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+
+
+@media (max-width: 992px) {
+  .containerEducacion {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .containerEducacion .card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerEducacion .card {
+    max-width: 300px;
+    flex-direction: column;
+    height: auto;
+  }
+  .containerEducacion .card .imgBx {
+    position: relative;
+  }
+  .containerEducacion .card .imgBx,
+  .containerEducacion .card:hover .imgBx {
+    width: 100%;
+    height: 200px;
+    left: 0;
+  }
+  .containerEducacion .card .imgBx img,
+  .containerEducacion .card:hover .imgBx img {
+    max-width: 100%;
+  }
+  .containerEducacion .card .content {
+    position: relative;
+    width: 100%;
+  }
+}
+
+
+/* ===== SECCION SOBRE MIS PROYECTOS ===== */
+
+#proyectos {
+  background: #404040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1 {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.container1 .card {
+  position: relative;
+  height: 250px;
+  display: flex;
+  width: 45%;
+  margin: 30px 0;
+}
+
+.container1 .card .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.container1 .card:hover .imgBx {
+  width: 150px;
+  height: 150px;
+  left: -150px;
+  top: calc(50%-75px);
+  transition: 0.5s ease-in-out;
+  background: #45f3ff;
+}
+
+.container1 .card .imgBx:before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 6em;
+  color: #ffffff0d;
+  font-weight: 700;
+}
+
+.container1 .card .imgBx img {
+  max-width: 100px;
+  transition: 0.5s ease-in-out;
+}
+
+.container1 .card:hover .imgBx img {
+  max-width: 75px;
+}
+
+.container1 .card .content {
+  position: absolute;
+  right: 0;
+  width: calc(100%-75px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1 .card .content h3 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.container1 .card .content a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #8ed5da;
+  text-decoration: none;
+  color: #504e4e;
+}
+
+@media (max-width: 992px) {
+  .container1 {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container1 .card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container1 .card {
+    max-width: 300px;
+    flex-direction: column;
+    height: auto;
+  }
+  .container1 .card .imgBx {
+    position: relative;
+  }
+  .container1 .card .imgBx,
+  .container1 .card:hover .imgBx {
+    width: 100%;
+    height: 200px;
+    left: 0;
+  }
+  .container1 .card .imgBx img,
+  .container1 .card:hover .imgBx img {
+    max-width: 100%;
+  }
+  .container1 .card .content {
+    position: relative;
+    width: 100%;
+  }
+}
+
+
+/* ===== SECCION SOBRE MIS HOBBIES ===== */
+
+
+
+
+
+
+/* ===== SECCION DE CONTACTO ===== */
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+
+.seccionContacto {
+  background: #2c2b2b;
+  color: #45f3ff;
+}
+
+.container {
+  width: 80%;
+  padding: 20px;
+}
+
+.container h2 {
+  width: 100%;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container .row100 {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.container .row100 .col {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  transition: 0.5s;
+}
+
+.container .row100 .inputBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #45f3ff;
+}
+
+.container .row100 .inputBox input,
+.container .row100 .inputBox.textarea textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+
+.container .row100 .inputBox .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line {
+  height: 100%;
+}
+
+.container .row100 .inputBox .textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.container .row100 .inputBox.textarea textarea {
+  height: 100%;
+  resize: none;
+}
+
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line {
+  height: 100%;
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 7px 35px;
+  cursor: pointer;
+  outline: none;
+  background: #45f3ff;
+  color: #000;
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+input[type="submit"]:active {
+  opacity: 0.8;
+}
+
+
+
+
+/* TRANSICIONES REDES SOCIALES */
+
+.contacto {
+  padding-top: 1.5em;
+  justify-content: center;
+  align-items: center;
+  background-color: #404040;
+  color: #ffffff;
+  
+}
+
+.fa-github:hover {
+  transform: scale(2.5);
+  color: transparent;
+  transition: 0.4s ease-in-out;
+  background-image: url("../img/github.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1.5px;
+}
+
+.fa-linkedin:hover {
+  transform: scale(2.5);
+  color: transparent;
+  transition: 0.4s ease-in-out;
+  background-image: url("../img/linkedin.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1.5px;
+}
+
+.fa-square-instagram:hover {
+  transform: scale(2.5);
+  color: transparent;
+  transition: 0.4s ease-in-out;
+  background-image: url("../img/instagram.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1.5px;
+}
+
+.fa-facebook:hover {
+  transform: scale(2.5);
+  color: transparent;
+  transition: 0.4s ease-in-out;
+  background-image: url("../img/facebook.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1.5px;
+}
+
+.fa-twitter:hover {
+  transform: scale(2.5);
+  color: transparent;
+  transition: 0.4s ease-in-out;
+  background-image: url("../img/twitter.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1.5px;
+}
+
+.fa-whatsapp:hover {
+  transform: scale(2.5);
+  color: transparent;
+  transition: 0.4s ease-in-out;
+  background-image: url("../img/whatsApp.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1.5px;
+}
+
+/* Quitamos margen y fondo a la barra de las redes sociales */
+.list-group {
+  --bs-list-group-bg: transparent;
+  --bs-list-group-border-color: none;
+}
+
+li {
+  list-style-type: none; /*quita los puntitos de la lista */
+  margin-left: -3%;
+}
+
+
+
+/* ===== SECCION FOOTER ===== */
+
+.footer {
+  display: flex;
+  background: #404040;
+
+}
+
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item a{
+  color: #fff;
+}
+
+.item a:hover{
+  color: #45f3ff;
+}
+
+
+
+
+/* ===== Modificando modal login ===== */
+
+.modal-dialog{
+  color: #333;
+  
+}
+
+
+
+
+/* Ventana para ingresar animada */
+/* .contacto1{
+    background-color: #23242a;
+    min-height: 100%vh;
+    padding: 1.5em ;
+    align-items: center;
+}
+
+.box1{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, #45feff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, #45feff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.form{
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 50px 40px;
     display: flex;
-    width: 30%;
+    flex-direction: column;
 }
 
-#banner{
-    display: flex
-    border-style= solid;
-    padding: 20px 10px; 
+.form h2{
+    color: #45feff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
 }
 
-img{
-    width: 100%;  /*ancho del banner*/  
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #45feff;
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45feff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i{
+    height: 44px;
+
+}
+    
+
+.links{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.links a{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+
 }
 
 
-.col{
-    margin: auto;
+.links a:hover,
+.links a:nth-child(2)
+{
+    color: #45f3ff;
+}
+
+input[type="submit"]{
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:active{
+    opacity: 0.8;
+} */
+
+
+
+/* DASHBOARD */
+/* COLOCAMOS BANNER DE FONDO EN BODY DEL DASHBOARD*/
+body.fondoDash {
+  background-image: url(../img/bannerdash.png);
+  background-size: 100%;
+}
+
+.navbarDash{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.navbarDash .logoAPDash {
+  margin: auto;
+  padding: auto;
+  width: 5%;
+  height: 5%;
+}
+
+.fa-brands.fa-searchengin.fa-xl {
+  color: black;
+}
+
+.fa-brands.fa-searchengin.fa-xl:hover {
+  color: #2d24d3;
+}
+
+/* DASHBOARD1 */
+.row1 {
+  margin-top: 1rem;
+  display: block;
+}
+
+.col {
+  display: block;
+}
+
+
+
+
+
+
+
+/* MODALES */
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+}
+
+.btn-primary {
+  transform: scale(none);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+
+  .fotoPerfil {
+    align-items: center;
+    align-content: center;
+    align-self: auto;
+  }
 }

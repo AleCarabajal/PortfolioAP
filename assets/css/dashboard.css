@@ -1,0 +1,39 @@
+/* DASHBOARD */
+/* COLOCAMOS BANNER DE FONDO EN BODY DEL DASHBOARD*/
+body.fondoDash {
+  background-image: url(../img/bannerdash.png);
+  background-size: 100%;
+}
+
+.navbarDash{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.logoAP{
+    height: 2.5rem;
+}
+
+.navbarDash .logoAPDash {
+  margin: auto;
+  padding: auto;
+  width: 5%;
+  height: 5%;
+}
+
+.fa-brands.fa-searchengin.fa-xl {
+  color: black;
+  
+}
+
+.fa-brands.fa-searchengin.fa-xl:hover, 
+.fa-person-walking-dashed-line-arrow-right:hover
+{
+  color: #342ee7;
+  
+}
+
+
+
