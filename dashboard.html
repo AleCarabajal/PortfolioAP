@@ -73,31 +73,34 @@
         
         
             <!-- Modal Perfil -->
-           <div class="col">
+          <div class="col">
               <div class="p-3 m-3"> <button
             type="button"
             class="btnDash btn-lg p-5 bg-transparent"
             data-bs-toggle="modal"
-            data-bs-target="#loginModal">
+            data-bs-target="#perfil">
             <i class="fa-solid fa-camera-retro fa-2xl"></i>PERFIL
             
           </button></div>
-            </div>
+          </div>
         
+
+
+
              <!-- Modal Skills -->
-            <div class="col">
-              <div class="p-3 m-3"> <button
+          <div class="col">
+            <div class="p-3 m-3">
+              <button
                 type="button"
                 class="btnDash btn-lg p-5 bg-transparent"
                 data-bs-toggle="modal"
-                data-bs-target="#loginModal"
-                >
+                data-bs-target="#skills">
                 <i class="fa-sharp fa-solid fa-keyboard fa-2xl"></i>SKILLS
-                
-              </button></div>
+              </button>
             </div>
-
           </div>
+ 
+        </div>
           
           <div class="row g-2 g-lg-3">
         
@@ -107,7 +110,7 @@
             type="button"
             class="btnDash btn-lg p-5 bg-transparent"
             data-bs-toggle="modal"
-            data-bs-target="#loginModal"
+            data-bs-target="#experienciaLaboral"
           >
           <i class="fa-solid fa-briefcase fa-2xl"></i>EXP LABORAL
             </button></div>
@@ -119,7 +122,7 @@
             type="button"
             class="btnDash btn-lg p-5 bg-transparent"
             data-bs-toggle="modal"
-            data-bs-target="#loginModal"
+            data-bs-target="#proyectos"
           >
           <i class="fa-sharp fa-solid fa-network-wired fa-2xl"></i>PROYECTOS
           </button></div>
@@ -131,7 +134,7 @@
             type="button"
             class="btnDash btn-lg p-5 bg-transparent"
             data-bs-toggle="modal"
-            data-bs-target="#loginModal"
+            data-bs-target="#educacion"
           >
             <i class="fa-solid fa-graduation-cap fa-2xl"></i>EDUCACIÓN
           </button></div>
@@ -159,7 +162,7 @@
             type="button"
             class="btnDash btn-lg p-5 bg-transparent"
             data-bs-toggle="modal"
-            data-bs-target="#loginModal"
+            data-bs-target="#redesSociales"
           >
           <i class="fas fa-square-share-nodes fa-2xl"></i>REDES SOCIALES
           
@@ -172,7 +175,7 @@
             type="button"
             class="btnDash btn-lg p-5 bg-transparent"
             data-bs-toggle="modal"
-            data-bs-target="#loginModal"
+            data-bs-target="#curriculum"
           >
           <i class="fa-solid fa-file-pdf fa-2xl"></i>CURRICULUM
           </button></div>
@@ -186,7 +189,7 @@
                                    <!-- MODALES -->
 
 <!-- Modal Banner -->
-    <div
+  <div
     class="modal fade"
     id="banner"
     tabindex="-1"
@@ -221,10 +224,9 @@
         </div>
     </div>
   </div>
-</div>
+  </div>
 
-
-    <!-- Modal Cuidado al eliminar -->
+    <!-- Modal Cuidado al eliminar Banner -->
   <div
 class="modal fade"
 id="eliminarBanner"
@@ -251,18 +253,16 @@ aria-hidden="true"
     >
       Eliminar de todas formas
     </button>
-    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-target="#banner" data-bs-toggle="modal">Cancelar</button>
   </div>
 </div>
 </div>
   </div>
-
- 
    
   <!-- Modal Perfil -->
   <div
     class="modal fade"
-    id="loginModal"
+    id="perfil"
     tabindex="-1"
     aria-labelledby="loginModalLabel"
     aria-hidden="true"
@@ -270,7 +270,7 @@ aria-hidden="true"
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Banner</h1>
+          <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Perfil</h1>
           <button
             type="button"
             class="btn-close"
@@ -279,61 +279,71 @@ aria-hidden="true"
           ></button>
         </div>
         <div class="modal-body">
+          
+          <!-- Modificar foto perfil -->
           <form>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input
-                type="email"
-                required
-                placeholder="email@dominio.com"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label"
-                  >Contraseña</label
-                >
-                <input
-                  type="password"
-                  required
-                  placeholder="Coloque aquí su contraseña"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                />
-              </div>
+              <label for="formFile" class="form-label">Cambiar fotografía de perfil</label>
+              <input class="form-control" type="file" id="formFile">
             </div>
-            <div class="modal-footer">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="autoSizingCheck"
-                />
-                <label class="form-check-label" for="autoSizingCheck">
-                  Recuérdame
-                </label>
-              </div>
-              
-              
-              <div class="mb-3">
-                <label for="formFile" class="form-label">Default file input example</label>
-                <input class="form-control" type="file" id="formFile">
-              </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarFotoPerfil">Eliminar
+            </button>         
+            
 
+            <!-- Modificar Acerca de Mi -->
 
-              <button type="submit" class="btn btn-primary">Ingresar</button>
+            <div class="mb-3">
+              <br>  <label for="exampleFormControlTextarea1" class="form-label">Acerca de Mí</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+               <button type="button" class="btn btn-primary">Guardar</button>
+               <button type="button" class="btn btn-danger">Eliminar
+              </button>         
             </div>
           </form>
         </div>
       </div>
-    </div>
+  </div>
+
+ <!-- Modal Cuidado al eliminar Perfil -->
+  <div
+ class="modal fade"
+ id="eliminarFotoPerfil"
+ aria-labelledby="loginModalLabel"
+ tabindex="-1"
+ aria-hidden="true"
+ 
+ >
+ <div class="modal-dialog modal-dialog-centered">
+ <div class="modal-content">
+   <div class="modal-header">
+     <h1 class="modal-title fs-5" id="loginModalLabel">
+       ¡¡Cuidado!!
+     </h1>
+   </div>
+   <div class="modal-body">
+     ¿Está seguro que desea eliminar los datos de forma permanente? <br />
+     (Una vez eliminados, los cambios no se podrán deshacer)
+   </div>
+   <div class="modal-footer">
+     <button
+       class="btn btn-danger" 
+       data-bs-toggle="modal"
+     >
+       Eliminar de todas formas
+     </button>
+     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-target="#perfil" data-bs-toggle="modal">Cancelar</button>
+   </div>
+ </div>
+ </div>
   </div>
 
   <!-- Modal Skills -->
   <div
   class="modal fade"
-  id="loginModal"
+  id="skills"
   tabindex="-1"
   aria-labelledby="loginModalLabel"
   aria-hidden="true"
@@ -341,7 +351,7 @@ aria-hidden="true"
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Banner</h1>
+        <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Skills</h1>
         <button
           type="button"
           class="btn-close"
@@ -352,59 +362,40 @@ aria-hidden="true"
       <div class="modal-body">
         <form>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <label class="form-label">Habilidad</label>
             <input
-              type="email"
+              type="text"
               required
-              placeholder="email@dominio.com"
+              placeholder="Habilidad: HTML, CSS, JAVASCRIPT, IDIOMAS, ETC"
               class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
+              id="habilidad"
+             
+            /> <br>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Contraseña</label
-              >
+              <label for="quantity">Porcentaje (entre 1 y 100):</label>
               <input
-                type="password"
+                type="number"
                 required
-                placeholder="Coloque aquí su contraseña"
-                class="form-control"
-                id="exampleInputPassword1"
+                placeholder="%"
+                name="quantity" min="1" max="100"
+                id="cantidad"
               />
             </div>
           </div>
-          <div class="modal-footer">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="autoSizingCheck"
-              />
-              <label class="form-check-label" for="autoSizingCheck">
-                Recuérdame
-              </label>
-            </div>
-            
-            
-            <div class="mb-3">
-              <label for="formFile" class="form-label">Default file input example</label>
-              <input class="form-control" type="file" id="formFile">
-            </div>
-
-
-            <button type="submit" class="btn btn-primary">Ingresar</button>
+         
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger">Eliminar</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-  </div>
-
+  
   <!-- Modal Experiencia laboral -->
   <div
 class="modal fade"
-id="loginModal"
+id="experienciaLaboral"
 tabindex="-1"
 aria-labelledby="loginModalLabel"
 aria-hidden="true"
@@ -412,7 +403,7 @@ aria-hidden="true"
 <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
-      <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Banner</h1>
+      <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Experiencia Laboral</h1>
       <button
         type="button"
         class="btn-close"
@@ -423,48 +414,50 @@ aria-hidden="true"
     <div class="modal-body">
       <form>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <label for="formFile" class="form-label">Logo de la Empresa o Institución</label>
+          <input class="form-control" type="file" id="formFile">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Nombre de la Empresa o Institución</label>
           <input
-            type="email"
+            type="text"
             required
-            placeholder="email@dominio.com"
+            placeholder="Nombre de la Empresa o Institución"
             class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
+          /> <br>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Contraseña</label
-            >
+            <label class="form-label">Cargo</label>
             <input
-              type="password"
+              type="text"
               required
-              placeholder="Coloque aquí su contraseña"
+              placeholder="Nombre de la Empresa o Institución"
               class="form-control"
-              id="exampleInputPassword1"
-            />
+            /> <br>
+          
+          <div class="mb-3">
+            <label class="form-label">Trabajó Desde</label>
+            <input
+              type="date"
+              required
+              placeholder="Nombre de la Empresa o Institución"
+              class="form-control"
+            /> 
+            
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Trabajó Hasta</label>
+            <input
+              type="date"
+              required
+              placeholder="Nombre de la Empresa o Institución"
+              class="form-control"
+            /> 
           </div>
         </div>
-        <div class="modal-footer">
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="autoSizingCheck"
-            />
-            <label class="form-check-label" for="autoSizingCheck">
-              Recuérdame
-            </label>
-          </div>
-          
-          
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Default file input example</label>
-            <input class="form-control" type="file" id="formFile">
-          </div>
-
-
-          <button type="submit" class="btn btn-primary">Ingresar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger">Eliminar</button>
         </div>
       </form>
     </div>
@@ -474,144 +467,91 @@ aria-hidden="true"
 
   <!-- Modal Proyectos -->
   <div
-class="modal fade"
-id="loginModal"
-tabindex="-1"
-aria-labelledby="loginModalLabel"
-aria-hidden="true"
->
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Banner</h1>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="modal"
-        aria-label="Close"
-      ></button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input
-            type="email"
-            required
-            placeholder="email@dominio.com"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
+  class="modal fade"
+  id="proyectos"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+  >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Proyecto</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Contraseña</label
-            >
-            <input
-              type="password"
-              required
-              placeholder="Coloque aquí su contraseña"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="autoSizingCheck"
-            />
-            <label class="form-check-label" for="autoSizingCheck">
-              Recuérdame
-            </label>
-          </div>
-          
-          
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Default file input example</label>
+            <label for="formFile" class="form-label">Imagen</label>
             <input class="form-control" type="file" id="formFile">
           </div>
-
-
-          <button type="submit" class="btn btn-primary">Ingresar</button>
-        </div>
-      </form>
+  
+          <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input
+              type="text"
+              required
+              class="form-control"
+            /> <br>
+              <div class="mb-3">
+               <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</div>
-  </div>
+    
 
   <!-- Modal Educacion -->
   <div
-class="modal fade"
-id="loginModal"
-tabindex="-1"
-aria-labelledby="loginModalLabel"
-aria-hidden="true"
->
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Banner</h1>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="modal"
-        aria-label="Close"
-      ></button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input
-            type="email"
-            required
-            placeholder="email@dominio.com"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
+  class="modal fade"
+  id="educacion"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+  >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Educación</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Contraseña</label
-            >
-            <input
-              type="password"
-              required
-              placeholder="Coloque aquí su contraseña"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="autoSizingCheck"
-            />
-            <label class="form-check-label" for="autoSizingCheck">
-              Recuérdame
-            </label>
-          </div>
-          
-          
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Default file input example</label>
+            <label for="formFile" class="form-label">Certificado</label>
             <input class="form-control" type="file" id="formFile">
           </div>
-
-
-          <button type="submit" class="btn btn-primary">Ingresar</button>
-        </div>
-      </form>
+  
+          <div class="mb-3">
+         
+              <div class="mb-3">
+               <label for="exampleFormControlTextarea1" class="form-label">Descripción del estudio</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-</div>
   </div>
 
   <!-- Modal Hobbies -->
@@ -686,146 +626,86 @@ aria-hidden="true"
   </div>
 
  <!-- Modal Redes Sociales -->
-  <div
-class="modal fade"
-id="loginModal"
-tabindex="-1"
-aria-labelledby="loginModalLabel"
-aria-hidden="true"
->
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Banner</h1>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="modal"
-        aria-label="Close"
-      ></button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input
-            type="email"
-            required
-            placeholder="email@dominio.com"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Contraseña</label
-            >
-            <input
-              type="password"
-              required
-              placeholder="Coloque aquí su contraseña"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="autoSizingCheck"
-            />
-            <label class="form-check-label" for="autoSizingCheck">
-              Recuérdame
-            </label>
-          </div>
-          
-          
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Default file input example</label>
-            <input class="form-control" type="file" id="formFile">
-          </div>
-
-
-          <button type="submit" class="btn btn-primary">Ingresar</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-  </div>
+ <div
+ class="modal fade"
+ id="redesSociales"
+ tabindex="-1"
+ aria-labelledby="loginModalLabel"
+ aria-hidden="true"
+ >
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Red Social</h1>
+       <button
+         type="button"
+         class="btn-close"
+         data-bs-dismiss="modal"
+         aria-label="Close"
+       ></button>
+     </div>
+     <div class="modal-body">
+       <form>
+         <div class="mb-3">
+           <label for="formFile" class="form-label">Imagen de la Red Social</label>
+           <input class="form-control" type="file" id="formFile">
+         </div>
+ 
+         <div class="mb-3">
+           <label class="form-label">URL de la Red Social</label>
+           <input
+             type="text"
+             required
+             placeholder="Ej. www.instagram/AleCarabajal.com"
+             class="form-control"
+           /> <br>
+             
+         </div>
+         <button type="submit" class="btn btn-primary">Guardar</button>
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+         <button type="button" class="btn btn-danger">Eliminar</button>
+         </div>
+       </form>
+     </div>
+   </div>
+ </div>
 
   <!-- Modal Curriculum -->
   <div
-class="modal fade"
-id="loginModal"
-tabindex="-1"
-aria-labelledby="loginModalLabel"
-aria-hidden="true"
+  class="modal fade"
+  id="curriculum"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
 >
 <div class="modal-dialog">
   <div class="modal-content">
-    <div class="modal-header">
-      <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Banner</h1>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="modal"
-        aria-label="Close"
-      ></button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input
-            type="email"
-            required
-            placeholder="email@dominio.com"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Modificar Curriculum</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        
+        <form>
+                        
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Contraseña</label
-            >
-            <input
-              type="password"
-              required
-              placeholder="Coloque aquí su contraseña"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
+              <label for="formFile" class="form-label">Selecciona un PDF</label>
+              <input class="form-control" type="file" id="formFile">
           </div>
-        </div>
-        <div class="modal-footer">
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="autoSizingCheck"
-            />
-            <label class="form-check-label" for="autoSizingCheck">
-              Recuérdame
-            </label>
-          </div>
-          
-          
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Default file input example</label>
-            <input class="form-control" type="file" id="formFile">
-          </div>
-
-
-          <button type="submit" class="btn btn-primary">Ingresar</button>
-        </div>
-      </form>
-    </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal">Eliminar
+          </button>          
+         
+        </form>
+      </div>
   </div>
 </div>
-  </div>
+</div>
 
 
 <!-- JavaScript Bundle with Popper -->

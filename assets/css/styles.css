@@ -809,7 +809,16 @@ li {
 }
 
 
+.curriculum{
+  color: #ffffff;
+  border: #cdcaca solid;
+  
+}
 
+.curriculum:hover{
+  color: #45f3ff;
+  border: #45f3ff solid;
+}
 
 /* ===== Modificando modal login ===== */
 
@@ -984,50 +993,6 @@ input[type="submit"]{
 input[type="submit"]:active{
     opacity: 0.8;
 } */
-
-
-
-/* DASHBOARD */
-/* COLOCAMOS BANNER DE FONDO EN BODY DEL DASHBOARD*/
-body.fondoDash {
-  background-image: url(../img/bannerdash.png);
-  background-size: 100%;
-}
-
-.navbarDash{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.navbarDash .logoAPDash {
-  margin: auto;
-  padding: auto;
-  width: 5%;
-  height: 5%;
-}
-
-.fa-brands.fa-searchengin.fa-xl {
-  color: black;
-}
-
-.fa-brands.fa-searchengin.fa-xl:hover {
-  color: #2d24d3;
-}
-
-/* DASHBOARD1 */
-.row1 {
-  margin-top: 1rem;
-  display: block;
-}
-
-.col {
-  display: block;
-}
-
-
-
 
 
 
