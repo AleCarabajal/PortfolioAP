@@ -84,6 +84,20 @@ section {
   max-width: 100%;
 }
 
+/*===== ANIMACIÓN DE LOS TITULOS DE LAS SECCIONES =====*/
+.titulos span{
+  font-size: 40px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  display: inline-block;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--x));
+
+}
+
+@keyframes flip{
+  0%, 80% {transform: rotateY(360deg);}
+}
+
 /*===== SECCIÓN SOBRE MÍ =====*/
 .sobreMi {
   align-items: center;
@@ -323,7 +337,7 @@ p {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 10px;
 }
 
 .containerEducacion .card {
@@ -570,6 +584,8 @@ p {
   background:#404040;
 
 }
+
+
 
 .container2{
   position: relative;
