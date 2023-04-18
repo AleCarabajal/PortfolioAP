@@ -98,7 +98,7 @@ section {
   0%, 80% {transform: rotateY(360deg);}
 }
 
-/*===== SECCIÓN SOBRE MÍ =====*/
+                            /*===== SECCIÓN SOBRE MÍ =====*/
 .sobreMi {
   align-items: center;
   display: flex;
@@ -117,17 +117,15 @@ p {
   margin: 1.5rem;
 }
 
-/* ===== SECCION SOBRE MI EXPERIENCIA LABORAL ===== */
+                /* ===== SECCION SOBRE MI EXPERIENCIA LABORAL ===== */
 
-/* .laboral { */
   .row{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   grid-template-columns:auto;
-  flex-wrap: wrap;
- 
+  flex-wrap: wrap; 
 }
 
 .card-img-top {
